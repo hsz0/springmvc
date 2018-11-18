@@ -12,7 +12,29 @@
 </head>
 <body>
 <a href="hello?name=tome">Hello</a>
+<br/>
 <a href="antstyle">AntStyle</a>
+<br/>
 <a href="testPathVar/76">PathVar</a>
+<br/>
+获取用户信息
+<a href="testGet">testGet</a>
+<br/>
+新建用户信息
+<form action="testPost" method="post">
+    <input type="submit" value="POST">
+</form>
+<br/>
+删除用户信息
+<form action="testDelete/12" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="DELETE">
+</form>
+<br/>
+更新用户信息
+<form action="testPut/12" method="post">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" value="PUT">
+</form>
 </body>
 </html>
