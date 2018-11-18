@@ -36,13 +36,21 @@
     <input type="hidden" name="_method" value="PUT">
     <input type="submit" value="PUT">
 </form>
-
 <br/>
 测试获取请求参数值
 <form action="testRequestParam" method="post">
     id:<input type="text" name="id" value="输入id">
     name:<input type="text" name="name" value="输入name">
 
+    <input type="submit" value="Submit">
+</form>
+<br/>
+Pojo绑定请求参数
+<form action="testPojoParam" method="post">
+    id:<input type="text" name="id"><br/>
+    name:<input type="text" name="name"><br/>
+    city:<input type="text" name="address.city"><br/>
+    street:<input type="text" name="address.street"><br/>
     <input type="submit" value="Submit">
 </form>
 </body>

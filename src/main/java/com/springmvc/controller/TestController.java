@@ -1,6 +1,7 @@
 
 package com.springmvc.controller;
 
+import com.springmvc.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,7 +57,7 @@ public class TestController {
         return "success";
     }
 
-//    @RequestMapping(value = "/testRequestParam", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/testRequestParam", method = RequestMethod.POST)
 //    public String testRequestParam(@RequestParam(value = "id") Integer a
 //            , @RequestParam(value = "name") String b) {
 //        System.out.println(a);
@@ -68,6 +69,12 @@ public class TestController {
     public String testRequestParam(Integer id, String name) {
         System.out.println(id);
         System.out.println(name);
+        return "success";
+    }
+
+    @RequestMapping(value = "/testPojoParam", method = RequestMethod.POST)
+    public String testPojoParam(User user) {
+        System.out.println(user);
         return "success";
     }
 }
