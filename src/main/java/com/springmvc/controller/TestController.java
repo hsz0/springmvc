@@ -77,4 +77,11 @@ public class TestController {
         System.out.println(user);
         return "success";
     }
+
+    @RequestMapping("/testRequestHeader")
+    public String testRequestHeader(@RequestHeader("Accept-Language") String a, @RequestHeader("Referer") String b) {
+        System.out.println(a);
+        System.out.println(b);
+        return "success";
+    }
 }

@@ -53,5 +53,8 @@ Pojo绑定请求参数
     street:<input type="text" name="address.street"><br/>
     <input type="submit" value="Submit">
 </form>
+<br/>
+获取请求报头信息
+<a href="testRequestHeader">testRequestHeader</a>
 </body>
 </html>
