@@ -2,10 +2,7 @@
 package com.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -56,6 +53,21 @@ public class TestController {
     @ResponseBody
     public String testPut(@PathVariable(value = "id") int id) {
         System.out.println("正在更新id为" + id + "的信息");
+        return "success";
+    }
+
+//    @RequestMapping(value = "/testRequestParam", method = RequestMethod.POST)
+//    public String testRequestParam(@RequestParam(value = "id") Integer a
+//            , @RequestParam(value = "name") String b) {
+//        System.out.println(a);
+//        System.out.println(b);
+//        return "success";
+//    }
+    //或者省略 @RequestParam
+    @RequestMapping(value = "/testRequestParam", method = RequestMethod.POST)
+    public String testRequestParam(Integer id, String name) {
+        System.out.println(id);
+        System.out.println(name);
         return "success";
     }
 }
