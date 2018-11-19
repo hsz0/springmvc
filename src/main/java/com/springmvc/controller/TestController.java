@@ -84,4 +84,10 @@ public class TestController {
         System.out.println(b);
         return "success";
     }
+
+    @RequestMapping("/testCookieValue")
+    public String testCookieValue(@CookieValue("JSESSIONID") String a) {
+        System.out.println(a);
+        return "success";
+    }
 }

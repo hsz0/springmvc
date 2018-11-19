@@ -56,5 +56,8 @@ Pojo绑定请求参数
 <br/>
 获取请求报头信息
 <a href="testRequestHeader">testRequestHeader</a>
+<br/>
+获取Cookie中信息
+<a href="testCookieValue">testCookieValue</a>
 </body>
 </html>
