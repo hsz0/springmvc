@@ -3,7 +3,12 @@ package com.springmvc.controller;
 
 import com.springmvc.pojo.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Map;
 
 
 @Controller
@@ -88,6 +93,32 @@ public class TestController {
     @RequestMapping("/testCookieValue")
     public String testCookieValue(@CookieValue("JSESSIONID") String a) {
         System.out.println(a);
+        return "success";
+    }
+
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("success");
+        mv.addObject("name", "Tom123");
+        return mv;
+    }
+
+    @RequestMapping("/testMap")
+    public String testMap(Map<String, String> map) {
+        map.put("name1", "Jack");
+        return "success";
+    }
+
+    @RequestMapping("/testModel")
+    public String testModel(Model model) {
+        model.addAttribute("name2", "Luccy");
+        return "success";
+    }
+
+    @RequestMapping("/testModelMap")
+    public String testModelMap(ModelMap modelMap) {
+        modelMap.addAttribute("name3", "Lii");
         return "success";
     }
 }

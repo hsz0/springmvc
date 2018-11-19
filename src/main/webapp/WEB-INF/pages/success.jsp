@@ -12,5 +12,16 @@
 </head>
 <body>
     Success
+    ${requestScope.name}
+    <br/>
+    <br/>
+    ${requestScope.name1}
+    <br/>
+    <br/>
+    ${requestScope.name2}
+    <br/>
+    <br/>
+    ${requestScope.name3}
+    <br/>
 </body>
 </html>

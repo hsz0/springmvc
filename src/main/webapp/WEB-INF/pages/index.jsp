@@ -59,5 +59,14 @@ Pojo绑定请求参数
 <br/>
 获取Cookie中信息
 <a href="testCookieValue">testCookieValue</a>
+<br/>
+ModelAndView
+<a href="testModelAndView">testModelAndView</a><br/>
+Map
+<a href="testMap">testMap</a><br/>
+Model
+<a href="testModel">testModel</a><br/>
+ModelMap
+<a href="testModelMap">testModelMap</a>
 </body>
 </html>
