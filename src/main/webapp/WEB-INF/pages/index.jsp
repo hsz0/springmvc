@@ -68,5 +68,11 @@ Model
 <a href="testModel">testModel</a><br/>
 ModelMap
 <a href="testModelMap">testModelMap</a>
+
+<form action="testModelAttribute">
+    id:<input type="text" name="id">
+    name:<input type="text" name="name">
+    <input type="submit" value="Update">
+</form>
 </body>
 </html>

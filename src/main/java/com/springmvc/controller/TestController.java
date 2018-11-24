@@ -1,6 +1,7 @@
 
 package com.springmvc.controller;
 
+import com.springmvc.pojo.Account;
 import com.springmvc.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,7 @@ import java.util.Map;
 
 @Controller
 //@RequestMapping("springmvc")
+@SessionAttributes(value = {"name3"})
 public class TestController {
     @RequestMapping("/index")
     public String index() {
@@ -119,6 +121,23 @@ public class TestController {
     @RequestMapping("/testModelMap")
     public String testModelMap(ModelMap modelMap) {
         modelMap.addAttribute("name3", "Lii");
+        return "success";
+    }
+
+    @RequestMapping("/testResult")
+    public String testResult() {
+        return "result";
+    }
+
+    @ModelAttribute
+    public void start(Map<String,Object> map){
+        Account account = new Account(1,"Tom","2018-01-01");
+        map.put("abc",account);
+    }
+
+    @RequestMapping("/testModelAttribute")
+    public String testModelAttribute(@ModelAttribute("abc") Account account) {
+        System.out.println(account);
         return "success";
     }
 }

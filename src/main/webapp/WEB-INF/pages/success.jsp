@@ -23,5 +23,6 @@
     <br/>
     ${requestScope.name3}
     <br/>
+    <a href="testResult">testResult</a>
 </body>
 </html>
