@@ -129,10 +129,23 @@ public class TestController {
         return "result";
     }
 
-    @ModelAttribute
-    public void start(Map<String,Object> map){
+//    @ModelAttribute
+//    public void modelAttribute(Map<String,Object> map){
+//        Account account = new Account(1,"Tom","2018-01-01");
+//        map.put("abc",account);
+//    }
+//
+//    @RequestMapping("/testModelAttribute")
+//    public String testModelAttribute(@ModelAttribute("abc") Account account) {
+//        System.out.println(account);
+//        return "success";
+//    }
+
+    //或者
+    @ModelAttribute("abc")
+    public Account modelAttribute(){
         Account account = new Account(1,"Tom","2018-01-01");
-        map.put("abc",account);
+       return account;
     }
 
     @RequestMapping("/testModelAttribute")
