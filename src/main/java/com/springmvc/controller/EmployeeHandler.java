@@ -47,4 +47,10 @@ public class EmployeeHandler {
         EmployeeDao.delete(id);
         return "redirect:/emplist";
     }
+
+    @RequestMapping(value = "/emp", method = RequestMethod.PUT)
+    public String updateEmp(Employee employee) {
+        EmployeeDao.update(employee.getId(), employee);
+        return "redirect:/emplist";
+    }
 }

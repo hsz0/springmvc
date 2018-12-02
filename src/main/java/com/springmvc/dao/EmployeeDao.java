@@ -39,4 +39,9 @@ public class EmployeeDao {
     public static Employee getEmpById(Integer id) {
         return empls.get(id);
     }
+
+    public static void update(int id, Employee employee) {
+        employee.setDep(DepartmentDao.getDeptById(employee.getDep().getDepId()));
+        empls.put(id, employee);
+    }
 }

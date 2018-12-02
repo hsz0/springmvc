@@ -1,12 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 <h3>${abc.id!=null?'UPDATE EMP':'ADD EMP'}</h3>
-<form:form action="emp" method="post" modelAttribute="abc">
+<form:form action="../emp" method="post" modelAttribute="abc">
+    <c:if test="${abc.id!=null}">
+        <input type="hidden" name="_method" value="PUT"/>
+        <form:hidden path="id"/>
+    </c:if>
     <table>
         <tr>
             <td>姓名</td>
