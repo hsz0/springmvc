@@ -74,5 +74,8 @@ ModelMap
     name:<input type="text" name="name">
     <input type="submit" value="Update">
 </form>
+
+<a href="emplist">Employee List</a>
+<a href="addemp">Add Employee</a>
 </body>
 </html>
