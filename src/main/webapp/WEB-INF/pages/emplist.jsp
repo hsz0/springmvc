@@ -3,8 +3,21 @@
 <html>
 <head>
     <title>Title</title>
+    <%--<script type="application/javascript" src="../scripts/jquery.min.js"/>--%>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(function () {
+            $('.delete').click(function () {
+                    $('.form-delete').attr('action', $('.delete').attr('href')).submit();
+                    return false;
+                }
+            );
+        });
+    </script>
 </head>
 <body>
+
 <c:if test="${empty requestScope.emps}">
     <h3 align="center">NO Employees</h3>
 </c:if>
@@ -26,13 +39,15 @@
                 <td>"${emp.name}"</td>
                 <td>"${emp.mail}"</td>
                 <td>"${emp.gender==0?'male':'fmale'}"</td>
-                <td>"${emp.dep.depName}"</td>
-                <td><a href="#">DELETE</a></td>
-                <td><a href="#">UPDATE</a></td>
+                <td>"${emp.dep.depId==1?'SALES':'HR'}"</td>
+                <td><a class="delete" href="emp/${emp.id}">DELETE</a></td>
+                <td><a class="update" href="input/${emp.id}">UPDATE</a></td>
             </tr>
         </c:forEach>
     </table>
 </c:if>
-
+<form action="" method="post" class="form-delete">
+    <input type="hidden" name="_method" value="DELETE">
+</form>
 </body>
 </html>

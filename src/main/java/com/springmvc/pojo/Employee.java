@@ -7,12 +7,14 @@ public class Employee {
     private Integer gender;
     private Department dep;
 
-    public Employee(Integer id, String name, String mail, Integer gender, Department dep) {
+    public Employee(){}
+
+    public Employee(Integer id, String name, String mail, Integer gender, Department dept) {
         this.id = id;
         this.name = name;
         this.mail = mail;
         this.gender = gender;
-        this.dep = dep;
+        this.dep = dept;
     }
 
     public Integer getId() {

@@ -76,6 +76,7 @@ ModelMap
 </form>
 
 <a href="emplist">Employee List</a>
-<a href="addemp">Add Employee</a>
+<br/>
+<a href="input/0">Add Employee</a>
 </body>
 </html>

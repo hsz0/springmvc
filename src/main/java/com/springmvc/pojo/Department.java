@@ -4,6 +4,10 @@ public class Department {
     private Integer depId;
     private String depName;
 
+    public Department(){
+
+    }
+
     public Department(Integer depId, String depName) {
         this.depId = depId;
         this.depName = depName;
